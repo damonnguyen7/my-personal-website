@@ -1,11 +1,11 @@
-var http = require('http');
+var express = require('express');
+var app = express();
+var port = 8080;
 
-var requestHandler = function(req, res) {
-  res.end("Hello World!");
-};
+app.listen(port, function() {
+  console.log("Listening on port 8080");
+});
 
-const server = http.createServer(requestHandler);
-
-server.listen(8080, function() {
-  console.log('Listening on port 8080');
+app.get('/', function(req, res) {
+  res.send('Hello World!');
 });
