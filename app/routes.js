@@ -1,9 +1,10 @@
 var express = require('express');
 var router = express.Router();
+var path = require('path');
 
 //GET
 router.get('/', function(req, res) {
-  res.send('Hello World!');
+  res.sendFile(path.join(__dirname, '../index.html'));
 });
 
 router.get('/about', function(req, res) {
