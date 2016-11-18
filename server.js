@@ -9,3 +9,12 @@ app.listen(port, function() {
 app.get('/', function(req, res) {
   res.send('Hello World!');
 });
+
+app.get('/about', function(req, res) {
+  res.send('About page!');
+});
+
+app.get('/contact', function(req, res) {
+  res.send('Contact page!');
+});
+
