@@ -17,7 +17,9 @@
   },
   "homepage": "https://github.com/damonnguyen92/my-personal-website#readme",
   "dependencies": {
+    "ejs": "^2.5.2",
     "express": "^4.14.0",
+    "express-ejs-layouts": "^2.2.0",
     "nodemon": "^1.11.0"
   }
 }
