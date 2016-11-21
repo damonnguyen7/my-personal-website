@@ -20,18 +20,20 @@ header .navbar {
 
 .hero-content {
   position: absolute;
-  top: 50%;
+  top: 35%;
   text-align: center;
   width: 100%;
 }
 
-.hero-content h2 {
-  color: #FFF;
-  font-size: 80px;
+.hero-content h1 {
+  color: white;
+  text-shadow: 2px 2px black;
+  font-size: 70px;
 }
 
-.hero-content p {
-  color: #FFF;
+.hero-content h4 {
+  color: white;
+  text-shadow: 2px 2px black;
   font-size: 40px;
   margin-bottom: 30px;
 }
@@ -52,4 +54,27 @@ footer {
   color: #888;
   background: #222;
   text-align: center;
+}
+
+.profile-picture {
+  height: 400px;
+  width: 400px;
+}
+
+.jumbotron {
+  background-color: #222222;
+}
+
+.jumbotron-component-img {
+  color: white;
+  float: left;
+  margin-left: 125px;
+}
+
+.jumbotron-component-description {
+  color: white;
+  margin-top: 12%;
+  width: 1200px;
+  padding-left: 550px;
+
 }
