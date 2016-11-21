@@ -4,15 +4,15 @@ var path = require('path');
 
 //GET
 router.get('/', function(req, res) {
-  res.sendFile(path.join(__dirname, '../index.html'));
+  res.render('pages/index'); 
 });
 
 router.get('/about', function(req, res) {
-  res.send('About page!');
+  res.render('pages/about');
 });
 
 router.get('/contact', function(req, res) {
-  res.send('Contact page!');
+  res.render('pages/contact');
 });
 
 //POST
