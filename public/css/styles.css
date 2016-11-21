@@ -76,5 +76,28 @@ footer {
   margin-top: 12%;
   width: 1200px;
   padding-left: 550px;
+}
 
+.project-container {
+  width: 600px;
+}
+
+.img-project {
+  height: 350px;
+  width: 525px;
+  display:block;
+  margin:auto;
+}
+
+.h4-project {
+  text-align: center;  
+}
+
+.p-project {
+  display: block;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 18px;
+  width: 600px;
 }
