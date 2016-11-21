@@ -14,7 +14,7 @@
 <div class="jumbotron text-center" style="
     height: 596px;">
   <div class="jumbotron-component-img"> 
-    <h3><%- name %></h3>
+    <h3 class="h3-name"><%- name %></h3>
     <img class="profile-picture" src="<%- avatar %>">
   </div>
   <div class="jumbotron-component-description">
@@ -22,3 +22,20 @@
   </div>
 </div>
 
+<!-- projects -->
+<div class="container project-container">
+  <h2 style="text-align: center;">Projects</h2>
+  <% for (project of projects) { %>
+    <div class="project-component-img" style="padding-top: 20px;">
+      <div class="img-container">
+        <h4 class="h4-project"><%- project.name %></h4>
+        <a href="<%- project.link %>" target="_blank">
+          <img class="img-project" src="<%- project.image %>">
+        </a>
+      </div>
+      <div class="project-component-description">
+        <p class="p-project"><%- project.description %></p>
+      </div>
+    </div>
+  <% } %>
+</div>
