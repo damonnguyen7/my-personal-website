@@ -1,0 +1,24 @@
+<!-- section -->
+<%- contentFor('hero') %>
+<section class="hero">
+  <div class="hero-content">
+    <h1><%- name %></h1>
+    <h4>Software Engineer</h4>
+
+    <a class="btn btn-lg btn-primary" href="/contact">Contact</a>
+  </div>
+</section>
+
+<!-- main -->
+<% contentFor('body') %>
+<div class="jumbotron text-center" style="
+    height: 596px;">
+  <div class="jumbotron-component-img"> 
+    <h3><%- name %></h3>
+    <img class="profile-picture" src="<%- avatar %>">
+  </div>
+  <div class="jumbotron-component-description">
+    <p><%- description %></p>
+  </div>
+</div>
+
