@@ -1,10 +1,18 @@
-var express = require('express');
+//load environment variable from .env
+require('dotenv').config();
+
+const express = require('express'),
+      router = require('./app/routes'),
+      expressLayouts = require('express-ejs-layouts'),
+      bodyParser = require('body-parser'),
+      mongoose = require('mongoose');
+
 var app = express();
-var port = 8080;
-var router = require('./app/routes');
-var expressLayouts = require('express-ejs-layouts');
-var bodyParser = require('body-parser');
-var mongoose = require('mongoose');
+var port = process.env.PORT || 8080;
+
+
+//connect to server:
+mongoose.connect(process.env.MONGOOSEURI);
 
 app.set('view engine', 'ejs'); //set up for EJS templating
 
