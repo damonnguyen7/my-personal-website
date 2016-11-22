@@ -101,3 +101,8 @@ footer {
   font-size: 18px;
   width: 600px;
 }
+
+.contact-form div {
+  padding-top: 2px;
+  padding-bottom: 2px;
+}
