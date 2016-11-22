@@ -3,11 +3,11 @@ const mongoose = require('mongoose'),
 
 //Create project schema
 var projectSchema = schema({
-  name: {
+  name: String,
+  email: {
     type: String,
     unique: true
   },
-  email: String,
   avatar: String,
   description: String
 });
