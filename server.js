@@ -10,12 +10,9 @@ const express = require('express'),
 var app = express();
 var port = process.env.PORT || 8080;
 
-
-//connect to server:
-mongoose.connect(process.env.MONGOOSEURI);
-
 app.set('view engine', 'ejs'); //set up for EJS templating
 
+//Middleware: 
 app.use(expressLayouts); //override the default response.render() behavior
 app.use(bodyParser.urlencoded({
   extended: true
@@ -28,3 +25,6 @@ app.use(express.static(__dirname + '/public')); //add express.static middleware 
 app.listen(port, function() {
   console.log("Listening on port 8080");
 }); 
+
+//Mongoose: connecting to database
+mongoose.connect(process.env.MONGOOSEURI);
