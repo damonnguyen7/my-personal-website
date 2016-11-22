@@ -51,6 +51,9 @@ router.get('/contact', function(req, res) {
 });
 
 //POST
-router.post('/contact');
+router.post('/contact', function(req, res) {
+  //log: *name* has contacted you
+  console.log(req.body.name + " has contacted you!");
+});
 
 module.exports = router;
