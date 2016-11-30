@@ -1,3 +1,5 @@
+var Message = require('../model/message-model');
+
 module.exports = {
   landingPage: function(req, res) {
     res.render('pages/home');
@@ -40,10 +42,35 @@ module.exports = {
     });
 
   },
+  allmessagesGET: function (req, res) {
+    Message.find({}, function (err, messages) {
+      console.log('messages', messages);
+      if (err) {
+        return res.json(err);
+      }
+      res.render('pages/allmessages', {
+        messages: messages
+      });
+    });
+  },
+
   contactGET: function(req, res) {
     res.render('pages/contact');
   },
   contactPOST: function(req, res) {
     console.log(req.body.name + " has contacted you!");
+
+    var newMessage = new Message({
+      name: req.body.name,
+      message: req.body.message
+    });
+
+    newMessage.save(function (err, newMessage) {
+      if (err) {
+        return res.json(err);
+      }
+      res.json(newMessage);
+      
+    });
   }
 }
