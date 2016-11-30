@@ -21,10 +21,16 @@ app.use(bodyParser.json());
 app.use('/', router); //Add our router to the middleware.
 app.use(express.static(__dirname + '/public')); //add express.static middleware function to serve static files
 
-
-app.listen(port, function() {
-  console.log("Listening on port 8080");
-}); 
-
 //Mongoose: connecting to database
 mongoose.connect(process.env.MONGOOSEURI);
+
+// connection is reference to mongoose connection to db
+var db = mongoose.connection;
+
+db.on('error', console.error.bind(console, 'connection error:'));
+db.once('open', function() {
+  console.log('connected to mongoDB');
+  app.listen(port, function() {
+    console.log("Listening on port 8080");
+  });   
+});
